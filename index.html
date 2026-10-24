@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Release Reaper — EMR Release Notes, Organized</title>
+<meta name="description" content="Release Reaper turns raw EMR release notes into categorized, impact-scored change intelligence: a Clinical Ops Brief your teams can act on, in the formats they already use.">
+<style>
+  :root{
+    --ink:#14202b; --muted:#54687a; --line:#dde5ec; --bg:#f7fafc;
+    --card:#ffffff; --accent:#0e7a5f; --accent-dark:#0a5c48; --chip:#e8f4f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--accent-dark)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  header.site{background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px;letter-spacing:-.01em}
+  .brand .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800}
+  .nav nav a{margin-left:26px;text-decoration:none;color:var(--muted);font-size:15px}
+  .nav nav a:hover{color:var(--ink)}
+  .hero{padding:84px 0 64px;text-align:center}
+  .hero h1{font-size:46px;line-height:1.15;letter-spacing:-.02em;max-width:760px;margin:0 auto 18px}
+  .hero h1 .hl{color:var(--accent-dark)}
+  .hero p{font-size:19px;color:var(--muted);max-width:680px;margin:0 auto 30px}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 28px;border-radius:10px;font-weight:600;font-size:16px}
+  .cta:hover{background:var(--accent-dark)}
+  .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .chip{background:var(--chip);color:var(--accent-dark);border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:600}
+  section{padding:56px 0}
+  h2{font-size:30px;letter-spacing:-.015em;margin-bottom:12px}
+  .lede{color:var(--muted);font-size:17px;max-width:720px;margin-bottom:34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15.5px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:step}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .step .n{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:15px}
+  .step h3{font-size:17px;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:15px}
+  .band{background:#0f2a23;color:#e7f2ee;border-radius:18px;padding:44px 40px}
+  .band h2{color:#fff}
+  .band p{color:#bcd8cf;max-width:680px}
+  .band ul{margin:18px 0 0 20px;color:#d9eae3}
+  .band li{margin-bottom:8px}
+  footer{border-top:1px solid var(--line);background:#fff;padding:34px 0;margin-top:40px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:14.5px}
+  @media (max-width:640px){.hero h1{font-size:34px}.hero{padding:56px 0 44px}.nav nav{display:none}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">R</span> Release Reaper</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#brief">Clinical Ops Brief</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <h1>EMR release notes go in raw.<br><span class="hl">Change intelligence comes out.</span></h1>
+  <p>Release Reaper reads vendor release notes the way your informatics team wishes it had time to — every change extracted, categorized, tagged by clinical domain, and scored for operational impact.</p>
+  <a class="cta" href="#how">See how it works</a>
+  <div class="chips">
+    <span class="chip">PDF · DOCX · TXT · Markdown · HTML</span>
+    <span class="chip">Clinical Ops Brief</span>
+    <span class="chip">Impact scoring</span>
+    <span class="chip">Six export formats</span>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Built for the upgrade grind</h2>
+    <p class="lede">Every EHR upgrade drops hundreds of changes on clinical operations at once. Release Reaper separates what matters from the noise before your teams ever see it.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Complete extraction</h3>
+        <p>Upload a release-notes document and every distinct change is pulled out as its own structured entry — nothing buried in prose, nothing counted twice.</p>
+      </div>
+      <div class="card">
+        <h3>Categorized &amp; domain-tagged</h3>
+        <p>Each entry is classified — new feature, enhancement, bug fix, workflow change — and tagged to the EMR domains it touches, from orders and results to scheduling and billing.</p>
+      </div>
+      <div class="card">
+        <h3>Impact scoring</h3>
+        <p>Entries are scored for operational impact and flagged for what needs action: training, build changes, policy review, or end-user communication.</p>
+      </div>
+      <div class="card">
+        <h3>Safety signals surface first</h3>
+        <p>Changes that affect patient safety or clinical data rise to the top of the brief — not lost on page forty of a vendor PDF.</p>
+      </div>
+      <div class="card">
+        <h3>Version-to-version compare</h3>
+        <p>Fuzzy comparison across releases shows what is genuinely new, what changed, and what carried over — so upgrade planning starts from a diff, not a reread.</p>
+      </div>
+      <div class="card">
+        <h3>Exports your team already uses</h3>
+        <p>Take the results out in six formats — including JSON, CSV, and Markdown — ready for ticket systems, training plans, and leadership summaries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">Four steps between a vendor document and a brief your CMIO will actually read.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Upload</h3><p>Drop in the release notes — PDF, Word, text, Markdown, or HTML, from any EMR vendor.</p></div>
+      <div class="step"><div class="n">2</div><h3>Analyze</h3><p>Entries are extracted, deduplicated, categorized, domain-tagged, and impact-scored automatically.</p></div>
+      <div class="step"><div class="n">3</div><h3>Review the brief</h3><p>The Clinical Ops Brief leads with action-required items: safety, workflow, and training impacts first.</p></div>
+      <div class="step"><div class="n">4</div><h3>Export &amp; assign</h3><p>Send the results to the tools your teams work in, with owners and next steps attached.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="brief">
+  <div class="wrap">
+    <div class="band">
+      <h2>The Clinical Ops Brief</h2>
+      <p>One document per release that answers the only questions leadership asks about an upgrade:</p>
+      <ul>
+        <li>What is changing that affects patient care or clinical data?</li>
+        <li>Which workflows, roles, and departments are touched?</li>
+        <li>What needs training, build work, or a policy decision — and by when?</li>
+        <li>What can safely be ignored this cycle?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Put Release Reaper to work on your next upgrade</h2>
+    <p class="lede">Release Reaper is a product of AugustInnovations LLC, built by a clinical application specialist with over seven years inside EHR upgrade cycles. For pilots, partnerships, or a walkthrough with your own release notes, get in touch.</p>
+    <a class="cta" href="https://augustinnovations.io">Contact AugustInnovations</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AugustInnovations LLC. All rights reserved.</span>
+    <span><a href="https://augustinnovations.io">augustinnovations.io</a></span>
+  </div>
+</footer>
+</body>
+</html>
